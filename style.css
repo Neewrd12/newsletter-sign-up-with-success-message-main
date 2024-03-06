@@ -1,0 +1,390 @@
+body
+{
+  margin: 0;
+  padding: 0;
+  background-color: hsl(234, 29%, 20%);
+  display: flex;
+  justify-content: center;
+}
+
+.content
+{
+  justify-content: center;
+  margin-top: 40px;
+  max-width: 840px;
+  flex-wrap: wrap-reverse;
+  background-color: white;
+  border-radius: 25px;
+  display: flex;
+  padding: 15px;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+.left-side
+{
+  padding: 30px;
+  max-width: 370px;
+}
+
+.icon
+{
+  display: flex;
+  gap: 15px;
+}
+
+.email
+{
+  font-weight: 900;
+  color: hsl(234, 29%, 20%);
+  font-size: 16px;
+}
+
+.bottom
+{
+  width: 350px;
+}
+
+.btn
+{
+  cursor: pointer;
+  background-color: hsl(234, 29%, 20%);
+  border: none;
+  border-radius: 5px;
+  padding: 18px 30px 18px 30px;
+  width: 100%;
+  color: white;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 1px;
+  transition: all 0.27s;
+}
+
+.btn:hover
+{
+  background: linear-gradient(270deg, rgb(250, 67, 6), rgb(243, 128, 119));
+}
+
+/*Text*/
+.left-side h1
+{
+  font-size: 56px;
+  color: hsl(234, 29%, 20%);
+  margin-bottom: 35px;
+}
+
+.desc
+{
+  margin-bottom: 20px;
+}
+
+.icon p
+{
+  margin: 8px 0px 8px 0px;
+  font-weight: 400;
+}
+
+.right-side img
+{
+  width: 100%;
+}
+
+/*Success Message*/
+.success-page
+{
+  display: none;
+}
+
+.success-page h1
+{
+  margin: 20px 0px 30px 0px;
+  font-size: 54px;
+}
+
+.success-page p
+{
+  margin: 0px 0px 30px 0px;
+  font-size: 14px;
+  color: hsl(234, 29%, 20%);
+  font-weight: 500;
+}
+
+.succesBTN
+{
+  cursor: pointer;
+  background-color: hsl(234, 29%, 20%);
+  border: none;
+  border-radius: 10px;
+  padding: 18px 30px 18px 30px;
+  width: 100%;
+  color: white;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 1px;
+  transition: all 0.27s;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.succesBTN:hover
+{
+  background: linear-gradient(270deg, rgb(250, 67, 6), rgb(243, 128, 119));
+}
+
+/*JS*/
+.new /*Content*/
+{
+  position: absolute;
+  top: 40px;
+  z-index: -10;
+  display: block;
+  border-radius: 20px;
+  background-color: white;
+  width: 360px;
+  font-family: 'Roboto', sans-serif;
+  padding: 40px 35px 20px 35px;
+}
+
+.gone
+{
+  display: none;
+}
+
+.valid
+{
+  display: none;
+}
+
+.unvalid
+{
+  display: block;
+  padding-right: 18px;
+  color: red;
+  font-weight: 500;
+  margin: 0;
+}
+
+.inputJs
+{
+  margin-bottom: 25px;
+  border: solid hsl(231, 7%, 60%) 0.5px;
+  border-radius: 5px;
+  width: 330px;
+  padding: 18px 0px 18px 18px;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 1px;
+}
+
+.inputJsError
+{
+  margin-bottom: 25px;
+  border: solid rgb(250, 98, 98) 0.5px;
+  background-color: rgb(249, 218, 218);
+  border-radius: 5px;
+  width: 330px;
+  padding: 18px 0px 18px 18px;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 1px;
+}
+
+@media only screen and (max-width: 376px) {
+  body
+  {
+    margin: 0;
+    padding: 0;
+    background-color: hsl(234, 29%, 20%);
+  }
+
+  .content
+  {
+    margin-top: 0px;
+    max-width: 100%;
+    flex-wrap: wrap-reverse;
+    background-color: white;
+    border-radius: 0px;
+    display: flex;
+    padding: 0px;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  }
+
+  .left-side
+  {
+    margin-left: 10px;
+    padding: 0px;
+    margin-bottom: 40px;
+  }
+
+  .icon
+  {
+    display: flex;
+    gap: 15px;
+  }
+
+  .email
+  {
+    font-weight: 900;
+    color: hsl(234, 29%, 20%);
+    font-size: 16px;
+  }
+
+  .bottom
+  {
+    width: 100%;
+  }
+
+  .btn
+  {
+    cursor: pointer;
+    background-color: hsl(234, 29%, 20%);
+    border: none;
+    border-radius: 5px;
+    padding: 18px 30px 18px 30px;
+    width: 100%;
+    color: white;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1px;
+    transition: all 0.27s;
+  }
+
+  .btn:hover
+  {
+    background: linear-gradient(270deg, rgb(250, 67, 6), rgb(243, 128, 119));
+  }
+
+  /*Text*/
+  .left-side h1
+  {
+    font-size: 35px;
+    color: hsl(234, 29%, 20%);
+    margin-bottom: 15px;
+  }
+
+  .desc
+  {
+    margin-bottom: 20px;
+  }
+
+  .icon p
+  {
+    margin: 8px 0px 8px 0px;
+    font-weight: 400;
+  }
+
+  .right-side
+  {
+    margin-bottom: 440px;
+  }
+
+  .right-side img
+  {
+    top: -100px;
+    right: 0;
+    left: 0;
+    position: absolute;
+  }
+
+  /*Success Message*/
+  .success-page
+  {
+    display: none;
+  }
+
+  .success-page h1
+  {
+    margin: 0px 0px 0px 0px;
+    font-size: 30px;
+  }
+
+  .success-page p
+  {
+    margin: 0px 0px 30px 0px;
+    font-size: 10px;
+    color: hsl(234, 29%, 20%);
+    font-weight: 500;
+  }
+
+  .succesBTN
+  {
+    cursor: pointer;
+    background-color: hsl(234, 29%, 20%);
+    border: none;
+    border-radius: 10px;
+    padding: 18px 30px 18px 30px;
+    width: 100%;
+    color: white;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1px;
+    transition: all 0.27s;
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .succesBTN:hover
+  {
+    background: linear-gradient(270deg, rgb(250, 67, 6), rgb(243, 128, 119));
+  }
+
+  /*JS*/
+  .new /*Content*/
+  {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -10;
+    display: block;
+    border-radius: 0px;
+    background-color: white;
+    width: auto;
+    font-family: 'Roboto', sans-serif;
+    padding: 40px 35px 20px 35px;
+  }
+
+  .gone
+  {
+    display: none;
+  }
+
+  .valid
+  {
+    display: none;
+  }
+
+  .unvalid
+  {
+    display: block;
+    padding-right: 18px;
+    color: red;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  .inputJs
+  {
+    margin-bottom: 25px;
+    border: solid hsl(231, 7%, 60%) 0.5px;
+    border-radius: 5px;
+    width: 94%;
+    padding: 18px 0px 18px 18px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1px;
+  }
+
+  .inputJsError
+  {
+    margin-bottom: 25px;
+    border: solid rgb(250, 98, 98) 0.5px;
+    background-color: rgb(249, 218, 218);
+    border-radius: 5px;
+    width: 94%;
+    padding: 18px 0px 18px 18px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1px;
+  }
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <!-- Sign-up form start -->
+  <div class="content" id="Js">
+    <div class="left-side">
+      <h1>Stay updated!</h1>
+      <p class="desc">Join 60,000+ product managers receiving monthly updates on:</p>
+      <div class="icon">
+        <img src="assets/images/icon-list.svg" alt=""><p>Product discovery and building what matters</p>
+      </div>
+      <div class="icon">
+        <img src="assets/images/icon-list.svg" alt=""><p>Measuring to ensure updates are a success</p>
+      </div>
+      <div class="icon">
+        <img src="assets/images/icon-list.svg" alt=""><p>And much more!</p>
+      </div>
+      
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 15px;">
+        <p class="email">Email address</p>
+        <p class="valid">Valid email required</p>
+      </div>
+      
+      <div class="bottom">
+        <input class="inputJs" type="text" placeholder="email@company.com" oninput="validateEmail()">
+        
+        <button class="btn"
+          onclick="
+            if (emailField.value.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/) ) 
+            {
+              const contentJs = document.getElementById('Js');
+              contentJs.classList.add('gone');
+
+              const successJs2 = document.getElementById('success');
+              successJs2.classList.add('new');
+            }
+            else
+            {
+              const contentJs = document.getElementById('Js');
+              alert('Email Invalid!');
+              
+              const successJs2 = document.getElementById('success');
+            successJs2.classList.add('success-page');
+            }
+            
+            const successJs2 = document.getElementById('success');
+            successJs2.classList.add('success-page');
+          "
+        >Subscribe to monthly newsletter</button>
+      </div>
+    </div>
+
+    <div class="right-side">
+      <img src="assets/images/illustration-sign-up-desktop.svg" alt="pewe">
+    </div>
+  </div>
+  <!-- Sign-up form end -->
+
+  <!-- Success message start -->
+
+  <div class="success-page" id="success">
+    <img src="assets/images/icon-success.svg" alt="">
+
+    <h1>Thanks for subscribing!</h1>
+
+    <p>A confirmation email has been sent to <b class="emailValue_js">ash@loremcompany.com.</b> Please open it and click the button inside to confirm your subscription.</p>
+    
+    <button class="succesBTN"
+      onclick="
+      const successJs = document.getElementById('success');
+      successJs.classList.add('success-page');
+
+      const contentJs2 = document.getElementById('Js');
+      contentJs2.classList.remove('gone');
+
+      emailField.value = '';
+    "
+    >Dismiss message</button>
+  </div>
+  
+  <!-- Success message end -->
+
+  <script>
+    let emailField = document.querySelector('.inputJs');
+    let emailError = document.querySelector('.valid');
+    let emailValue = document.querySelector('.emailValue_js');
+
+    function validateEmail()
+    {
+      if (emailField.value.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/) ) 
+      {
+        emailField.classList.remove('inputJsError');
+        emailError.classList.remove('unvalid');
+        emailValue.innerHTML = emailField.value;
+        return false;
+      }
+      emailField.classList.add('inputJsError');
+      emailError.classList.add('unvalid');
+      emailValue.innerHTML = emailField.value;
+      return true
+    }
+  </script>
+</body>
+</html>
